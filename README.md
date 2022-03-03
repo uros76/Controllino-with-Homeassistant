@@ -23,7 +23,7 @@ homeassistant:
 ```
   
 With File editor add-on, you need to create a folder /packages and then a subfolder inside /helium. 
-You need to end up with this structure /config/packages/helium
+You need to end up with this structure: /config/packages/helium
 
 Next, create a overall.yaml file inside /config/packages/helium folder. Insert the contents from overall.yaml file in this repo. Don't forget to replace THISSHOULDBEYOURxxxADRESS with your actual wallet or hotspot adress. You can add multiple wallets or hotspot adresses. Scan interval under nebra height sensor is set to 300seconds, change if needed but don't exagerate and flood the data pull. 
 
