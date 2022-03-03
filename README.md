@@ -16,17 +16,17 @@ Helium wallet and hotspot configuration on HA
 </h2>
 
 Since my HA is loaded with various integrations I have my configuration broken into packages. <br>
-To enable packages feature you need to add these lines into your HA configuration.yaml
+1. To enable packages feature you need to add these lines into your HA configuration.yaml
 ```console
 homeassistant:
   packages: !include_dir_named packages
 ```
-  
-With File editor add-on, you need to create a folder /packages and then a subfolder inside /helium. 
+
+2. With File editor add-on, you need to create a folder /packages and then a subfolder inside /helium. 
 You need to end up with this structure: /config/packages/helium
 
-Next, create a overall.yaml file inside /config/packages/helium folder. Insert the contents from overall.yaml file in this repo. Don't forget to replace THISSHOULDBEYOURxxxADRESS with your actual wallet or hotspot adress. You can add multiple wallets or hotspot adresses. Scan interval under nebra height sensor is set to 300seconds, change if needed but don't exagerate and flood the data pull. 
+3. Create a overall.yaml file inside /config/packages/helium folder. Insert the contents from overall.yaml file in this repo. Don't forget to replace THISSHOULDBEYOURxxxADRESS with your actual wallet or hotspot adress. You can add multiple wallets or hotspot adresses. Scan interval under nebra height sensor is set to 300seconds, change if needed but don't exagerate and flood the data pull. 
 
-Last step is to create a controllino1.yaml file inside /config/packages/helium folder. Insert the contents from controllino1.yaml file in this repo. Don't forget to replace YOURMINERIP with your actual hotspot local IP adress. You can add multiple hotspot configuration yaml files in same folder. The last section in controllino1.yaml requires SSH acces on your hotspot. If you do not have SSH acces just remove that part from the file. 
+4. Last step is to create a controllino1.yaml file inside /config/packages/helium folder. Insert the contents from controllino1.yaml file in this repo. Don't forget to replace YOURMINERIP with your actual hotspot local IP adress. You can add multiple hotspot configuration yaml files in same folder. The last section in controllino1.yaml requires SSH acces on your hotspot. If you do not have SSH acces just remove that part from the file. 
 
 Reboot HA and you have working sensors ready to be used on your HA lovelace dasboard. 
