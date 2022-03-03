@@ -1,0 +1,26 @@
+# below configlines  need to go into this location: /config/packages/helium/overall.yaml
+# add your wallet and hotspot adresses
+
+sensor:
+  - platform: helium
+    wallets:
+      - THISSHOULDBEYOURWALLETADRESS
+    hotspots:
+      - THISSHOULDBEYOURHOTSPOTADRESS
+
+  - platform: template
+    sensors:
+     helium_wallet_value:
+       value_template: "{{ (states('sensor.helium_hnt_oracle_price') |float(0) * states('sensor.helium_wallet_THISSHOULDBEYOURWALLETADRESS') | float(0)) | round(2) }}"
+       unit_of_measurement: "$"
+       friendly_name: "Wallet value"
+
+  - platform: command_line
+    command: python3 -c "import requests; print(requests.get('https://helium-snapshots.nebracdn.com/latest.json').json()['height'])"
+    scan_interval: 300
+    name: Nebra height
+
+utility_meter:
+  helium_wallet_today:
+    source: sensor.helium_wallet_THISSHOULDBEYOURWALLETADRESS
+    cycle: daily

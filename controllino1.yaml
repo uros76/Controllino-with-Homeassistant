@@ -1,0 +1,61 @@
+# below configlines  need to go into this location: /config/packages/helium/controllino1.yaml
+# change YOURMINERIP to your local hotspot IP adress
+
+sensor:
+  - platform: command_line
+    command: python3 -c "import requests; print(requests.get('http://YOURMINERIP/hotspotstats').json()['cputemp'])"
+    scan_interval: 120
+    unit_of_measurement: "°C"
+    value_template: '{{ value | round(1) }}'
+    name: Hotspot temperature
+
+  - platform: command_line
+    command: python3 -c "import requests; print(requests.get('http://YOURMINERIP/hotspotstats').json()['cpuload'])"
+    scan_interval: 120
+    name: Hotspot cpu load
+
+  - platform: command_line
+    command: python3 -c "import requests; print(requests.get('http://YOURMINERIP/hotspotstats').json()['ramusage'])"
+    scan_interval: 180
+    name: Hotspot ram use
+    unit_of_measurement: "MB"
+
+  - platform: command_line
+    command: python3 -c "import requests; print(requests.get('http://YOURMINERIP/hotspotstats').json()['diskusage'])"
+    scan_interval: 300
+    name: Hotspot disk use
+
+  - platform: command_line
+    command: python3 -c "import requests; print(requests.get('http://YOURMINERIP/miner-syncstatus').json()['height_percentage'])"
+    scan_interval: 300
+    unit_of_measurement: "%"
+    name: Hotspot sync status
+
+  - platform: command_line
+    command: python3 -c "import requests; print(requests.get('http://YOURMINERIP/miner-syncstatus').json()['miner_height'])"
+    scan_interval: 300
+    name: Hotspot height
+
+switch:
+  - platform: command_line
+    switches:
+      hotspot_reboot:
+        command_off: 'curl "http://YOURMINERIP/miner-reboot"'
+
+  - platform: command_line
+    switches:
+      hotspot_shutdown:
+        command_off: 'curl "http://YOURMINERIP/miner-shutdown"'
+
+  - platform: command_line
+    switches:
+      hotspot_instasync:
+        command_off: 'curl "http://YOURMINERIP/miner-instasync"'
+
+# optional if you want to get status of Lora LED. For this you need SSH access on your hotspot. If you don't have SSH simply remove below lines
+binary_sensor:
+  - platform: remote_rpi_gpio
+    host: YOURMINERIP
+    invert_logic: false
+    ports:
+      22: Lora on controllino1

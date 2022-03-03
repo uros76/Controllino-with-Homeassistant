@@ -1,0 +1,4 @@
+# below configlines  need to go into this location: /config/configuration.yaml
+
+homeassistant:
+  packages: !include_dir_named packages
