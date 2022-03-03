@@ -30,3 +30,6 @@ You need to end up with this structure: /config/packages/helium
 4. Last step is to create a controllino1.yaml file inside /config/packages/helium folder. Insert the contents from controllino1.yaml file in this repo. Don't forget to replace YOURMINERIP with your actual hotspot local IP adress. You can add multiple hotspot configuration yaml files in same folder. The last section in controllino1.yaml requires SSH acces on your hotspot. If you do not have SSH acces just remove that part from the file. 
 
 Reboot HA and you have working sensors ready to be used on your HA lovelace dasboard. 
+
+Example of my dashboard connected with helium and hotspot sensors: 
+![ ](/dashboard example.PNG)
