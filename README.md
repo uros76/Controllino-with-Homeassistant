@@ -32,4 +32,4 @@ You need to end up with this structure: /config/packages/helium
 Reboot HA and you have working sensors ready to be used on your HA lovelace dasboard. 
 
 Example of my dashboard connected with helium and hotspot sensors: 
-![ ](/dashboard example.PNG)
+![ ](/dashboard%20example.PNG)
