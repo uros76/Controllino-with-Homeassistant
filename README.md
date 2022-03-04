@@ -27,7 +27,7 @@ You need to end up with this structure: /config/packages/helium
 
 3. Create a overall.yaml file inside /config/packages/helium folder. Insert the contents from overall.yaml file in this repo. Don't forget to replace THISSHOULDBEYOURxxxADRESS with your actual wallet or hotspot adress. You can add multiple wallets or hotspot adresses. Scan interval under nebra height sensor is set to 300seconds, change if needed but don't exagerate and flood the data pull. 
 
-4. Last step is to create a controllino1.yaml file inside /config/packages/helium folder. Insert the contents from controllino1.yaml file in this repo. Don't forget to replace YOURMINERIP with your actual hotspot local IP adress. Scan interval on hotspot sensors data pull is set to 90seconds, change if needed but don't exagerate and flood the data pull. You can add multiple hotspot configuration yaml files in same folder. The last section in controllino1.yaml requires SSH acces on your hotspot. If you do not have SSH acces just remove that part from the file. 
+4. Last step is to create a controllino1.yaml file inside /config/packages/helium folder. Insert the contents from controllino1.yaml file in this repo. Don't forget to replace YOURMINERIP with your actual hotspot local IP adress. Scan intervals are set to 90/120seconds, change if needed but don't exagerate and flood the data pull. You can add multiple hotspot configuration yaml files in same folder. The last section in controllino1.yaml requires SSH acces on your hotspot. If you do not have SSH acces just remove that part from the file. 
 
 Reboot HA and you have working sensors ready to be used on your HA lovelace dasboard. 
 
