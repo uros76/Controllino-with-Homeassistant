@@ -1,0 +1,40 @@
+type: vertical-stack
+cards:
+  - type: glance
+    entities:
+      - entity: sensor.hotspot_cputemp
+        name: Temperature
+        icon: hass:thermometer
+      - entity: sensor.hotspot_cpuload
+        name: CPU load
+        icon: mdi:cpu-64-bit
+      - entity: sensor.hotspot_ramusage
+        icon: mdi:memory
+        name: Memory use
+      - entity: sensor.hotspot_diskusage
+        icon: mdi:harddisk
+        name: Disk use
+    title: Hotspot1 current status
+  - type: horizontal-stack
+    cards:
+      - type: entity
+        entity: sensor.hotspot_height_percentage
+        unit: '%'
+        name: Sync status
+      - type: entity
+        entity: binary_sensor.lora_on_controllino1
+        name: LoRa LED
+      - show_name: true
+        show_icon: true
+        show_state: false
+        type: glance
+        entities:
+          - entity: switch.hotspot_instasync
+            name: Sync
+            icon: mdi:cloud-sync
+          - entity: switch.hotspot_reboot
+            name: Reboot
+            icon: mdi:restart
+          - entity: switch.hotspot_shutdown
+            name: Shutdown
+            icon: mdi:restart-off

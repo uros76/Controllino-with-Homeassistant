@@ -1,0 +1,31 @@
+cards:
+  - entities:
+      - type: custom:template-entity-row
+        icon: mdi:map-marker-distance
+        name: Helium network height
+        entity: sensor.hotspot_helium_height
+      - type: custom:template-entity-row
+        icon: mdi:image-filter-hdr
+        name: Hotspot height
+        entity: sensor.hotspot_miner_height
+      - type: custom:template-entity-row
+        icon: mdi:image-filter-hdr
+        name: Nebra snapshot height
+        entity: sensor.nebra_height
+      - type: custom:template-entity-row
+        icon: mdi:download
+        name: Hotspot vs Nebra snapshot
+        state: >-
+          {{ (states("sensor.hotspot_miner_height") |float -
+          states("sensor.nebra_height") | float) |round(0) }}
+      - type: custom:template-entity-row
+        icon: mdi:harddisk
+        name: Hotspot disk use
+        entity: sensor.hotspot_diskusage
+    show_header_toggle: false
+    title: Blockchain & Hotspot1
+    type: entities
+layout: vertical
+type: custom:layout-card
+layout_type: masonry
+view_layout: vertical

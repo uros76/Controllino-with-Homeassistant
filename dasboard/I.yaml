@@ -1,0 +1,17 @@
+type: custom:apexcharts-card
+graph_span: 14d
+header:
+  show: true
+  title: Hotspot HW biweekly stats
+  show_states: false
+  colorize_states: true
+series:
+  - entity: sensor.hotspot_cputemp
+    stroke_width: 2
+    type: line
+    name: Temperature
+  - entity: sensor.hotspot_diskusage
+    stroke_width: 2
+    type: line
+    name: Disk use
+    unit: '%'
