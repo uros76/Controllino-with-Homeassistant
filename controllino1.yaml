@@ -3,38 +3,38 @@
 
 sensor:
   - platform: command_line
-    command: python3 -c "import requests; print(requests.get('http://YOURMINERIP/hotspotstats').json()['cputemp'])"
-    scan_interval: 120
-    unit_of_measurement: "°C"
-    value_template: '{{ value | round(1) }}'
-    name: Hotspot temperature
-
-  - platform: command_line
-    command: python3 -c "import requests; print(requests.get('http://YOURMINERIP/hotspotstats').json()['cpuload'])"
-    scan_interval: 120
-    name: Hotspot cpu load
-
-  - platform: command_line
-    command: python3 -c "import requests; print(requests.get('http://YOURMINERIP/hotspotstats').json()['ramusage'])"
-    scan_interval: 180
-    name: Hotspot ram use
-    unit_of_measurement: "MB"
-
-  - platform: command_line
-    command: python3 -c "import requests; print(requests.get('http://YOURMINERIP/hotspotstats').json()['diskusage'])"
-    scan_interval: 300
-    name: Hotspot disk use
-
-  - platform: command_line
     command: python3 -c "import requests; print(requests.get('http://YOURMINERIP/miner-syncstatus').json()['height_percentage'])"
     scan_interval: 300
-    unit_of_measurement: "%"
     name: Hotspot sync status
 
   - platform: command_line
     command: python3 -c "import requests; print(requests.get('http://YOURMINERIP/miner-syncstatus').json()['miner_height'])"
     scan_interval: 300
     name: Hotspot height
+
+  - platform: rest
+    scan_interval: 90
+    name: hotspot_stats
+    resource: http://YOURMINERIP/hotspotstats
+    json_attributes:
+      - diskusage
+      - ramusage
+      - cpuload
+      - cputemp
+    value_template: "on"
+  - platform: template
+    sensors:
+      hotspot_diskusage:
+        value_template: "{{state_attr('sensor.hotspot_stats', 'diskusage')}}"
+      hotspot_ramusage:
+        value_template: "{{state_attr('sensor.hotspot_stats', 'ramusage')}}"
+        unit_of_measurement: "MB"
+      hotspot_cpuload:
+        value_template: "{{state_attr('sensor.hotspot_stats', 'cpuload')}}"
+      hotspot_cputemp:
+        value_template: "{{state_attr('sensor.hotspot_stats', 'cputemp') |round(1)}}"
+        device_class: temperature
+        unit_of_measurement: "°C"
 
 switch:
   - platform: command_line
