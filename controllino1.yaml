@@ -2,15 +2,26 @@
 # change YOURMINERIP to your local hotspot IP adress
 
 sensor:
-  - platform: command_line
-    command: python3 -c "import requests; print(requests.get('http://YOURMINERIP/miner-syncstatus').json()['height_percentage'])"
-    scan_interval: 300
-    name: Hotspot sync status
-
-  - platform: command_line
-    command: python3 -c "import requests; print(requests.get('http://YOURMINERIP/miner-syncstatus').json()['miner_height'])"
-    scan_interval: 300
-    name: Hotspot height
+  - platform: rest
+    scan_interval: 120
+    name: hotspot_blockchain
+    resource: http://YOURMINERIP/miner-syncstatus
+    json_attributes:
+      - height_percentage
+      - miner_height
+      - helium_height
+      - syncing_done
+    value_template: "on"
+  - platform: template
+    sensors:
+      hotspot_height_percentage:
+        value_template: "{{state_attr('sensor.hotspot_blockchain', 'height_percentage')}}"
+      hotspot_miner_height:
+        value_template: "{{state_attr('sensor.hotspot_blockchain', 'miner_height')}}"
+      hotspot_helium_height:
+        value_template: "{{state_attr('sensor.hotspot_blockchain', 'helium_height')}}"
+      hotspot_syncing_done:
+        value_template: "{{state_attr('sensor.hotspot_blockchain', 'syncing_done')}}"
 
   - platform: rest
     scan_interval: 90
