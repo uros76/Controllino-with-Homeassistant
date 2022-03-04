@@ -1,9 +1,0 @@
-type: custom:apexcharts-card
-header:
-  show: true
-  title: Helium Wallet $ daily
-  show_states: true
-  colorize_states: true
-series:
-  - entity: sensor.helium_wallet_value
-    type: line

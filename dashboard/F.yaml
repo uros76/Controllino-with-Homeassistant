@@ -1,0 +1,25 @@
+type: custom:apexcharts-card
+graph_span: 24h
+header:
+  show: true
+  title: Hotspot HW daily stats
+  show_states: false
+  colorize_states: true
+series:
+  - entity: sensor.hotspot_cputemp
+    stroke_width: 2
+    type: line
+    name: Temperature
+  - entity: sensor.hotspot_cpuload
+    stroke_width: 1
+    type: line
+    unit: '%'
+    name: CPU load
+    group_by:
+      func: avg
+      duration: 5min
+  - entity: sensor.hotspot_diskusage
+    stroke_width: 2
+    type: line
+    name: Disk use
+    unit: '%'

@@ -1,0 +1,28 @@
+type: custom:uptime-card
+entity: sensor.YOURHOTSPOTNAME
+icon: mdi:router-wireless
+name: YOURHOTSPOTNAME
+ok: online
+ko: offline
+ko_icon: mdi:router-wireless-off
+hours_to_show: 24
+status_adaptive_color: true
+color:
+  icon: grey
+show:
+  icon: true
+  status: false
+  timeline: true
+  average: true
+  header: true
+  footer: true
+  title: true
+title_adaptive_color: true
+bar: {}
+init:
+  animation: raise
+alias: {}
+blink: {}
+alignment:
+  header: spaced
+  status: spaced
