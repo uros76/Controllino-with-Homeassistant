@@ -1,4 +1,4 @@
-# Controllino-with-Homeassistant
+# Controllino with Homeassistant
 How to connect Controllino hotspot with your Home Assistant (HA)<br><br>
 
 
