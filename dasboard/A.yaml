@@ -1,0 +1,57 @@
+type: custom:config-template-card
+entities:
+  - sensor.helium_wallet_today
+card:
+  type: custom:apexcharts-card
+  header:
+    show: true
+    show_states: false
+    colorize_states: true
+    title: Helium Mined daily
+  span:
+    start: day
+  graph_span: 24h
+  all_series_config:
+    stroke_width: 4
+    type: line
+    extend_to_end: false
+    float_precision: 2
+  color_list:
+    - lightblue
+    - grey
+  series:
+    - entity: sensor.helium_wallet_today
+      name: Today
+      type: area
+      group_by:
+        func: avg
+        duration: 20min
+    - entity: sensor.helium_wallet_today
+      name: Yesterday
+      offset: '-24h'
+      opacity: 0.2
+      group_by:
+        func: avg
+        duration: 20min
+      show:
+        in_header: true
+apex_config:
+  yaxis:
+    - seriesName: HNT
+      decimalsInFloat: 0
+    - seriesName: Helium
+      show: false
+  tooltip:
+    x:
+      format: ddd dd MMM - HH:mm
+  xaxis:
+    tooltip:
+      enabled: false
+  legend:
+    show: false
+  grid:
+    borderColor: '#7B7B7B'
+  chart:
+    foreColor: '#7B7B7B'
+    toolbar:
+      show: false
