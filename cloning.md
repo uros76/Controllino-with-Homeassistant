@@ -5,9 +5,9 @@ And remember, opening controllino hotspot voids warranty. Make sure you use offi
 
 --------------------------------------------
 Part 1 (obtain basic data needed to create custom image): 
-- Load Raspbian OS on SD card and boot up rPi
+- Load Raspbian OS on SD card and boot up rPi. I suggest you use a spare SD card, size does not matter it can be larger or smaller than 32gb. 
 
-- Connect monitor/screen to rPi and execute these comamnds in shell. Remember to copy outputs for later
+- Connect monitor/screen to rPi and execute these comamnds in shell. Remember to copy the outputs for later
 
 LAN MAC adress lookup:
 `cat /sys/class/net/eth0/address`
