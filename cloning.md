@@ -1,6 +1,6 @@
 Below are instructions for writing the backup cloned image to your controllino hotspot SD card. 
 
-Before you proceed you need to be aware I take no responsibility for mistakes you could do in the process. If you follow instruction steps everything should work ok. If there is any error or issue with any of below steps contact me imediately. 
+Before you proceed you need to be aware I take no responsibility for mistakes you could do in the process. If you follow instruction steps everything should work ok. Make sure you also test booting your hotspot with spare power supply. If there is any error or issue with any of below steps contact me imediately. 
 And remember, opening controllino hotspot voids warranty. Make sure you use official support before anything else. 
 
 --------------------------------------------
@@ -68,6 +68,8 @@ Once I have the data I will create the custom image for you.
 --------------------------------------------
 Part 2 (burning the custom image to your SD card, this is done after you recieve your image from me): 
 Before proceding with image loading make sure you test the rPi if it boots up from Raspbian OS and if network works. 
+If you followed above steps and rPi was working with fresh Raspberry OS then you are ok to proceed with below steps. 
+If your hotspot rPi failed to load fresh Raspberry OS then you have hardware problem. Either the rPi board or Lora module is faulty in which case this guide cannot help you. 
 
 - On Windows pc, download image to your harddrive. Make a new folder on C: drive and store the image there for easy access
 
