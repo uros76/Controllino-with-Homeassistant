@@ -1,4 +1,4 @@
-Instructions for burning the backup cloned image to your controllino hotspot. 
+Below are instructions for burning the backup cloned image to your controllino hotspot. 
 
 Before you proceed you need to be aware I take no responsibility for mistakes you could do in the process. If you follow instruction steps everything should work ok. If there is any error or issue with any of below steps contact me imediately. 
 And remember, opening controllino hotspot voids warranty. Make sure you use official support before anything else. 
