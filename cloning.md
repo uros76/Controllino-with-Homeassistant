@@ -76,7 +76,7 @@ If your hotspot rPi failed to load fresh Raspberry OS then you have hardware pro
 - Boot your pc with live linux loaded on USB stick. I prefer to do it direct from linux since it has native ext4 partition support. There are windows image writing software out there, I just don't use it. 
 It can be ubuntu or mint or any debian flavor linux. I use Linux Mint Mate edition from here https://www.linuxmint.com/download.php
 
-- Once you have live linux bootd up open File Browser and navigate to your pc hard drive and location to the image file
+- Once you have live linux booted up open File Browser and navigate to your pc hard drive and location to the image file
 
 - Write down or remember the path to image file. Here is my example of full path in live linux to the image file which sits on pc harddrive...
 /media/mint/68F4150CF414DDDE/folder/controllino.img
@@ -96,6 +96,6 @@ Drive name in my case is mmcblk0, we don't need partition number
 
 - Let hotspot work at least 10mins after first boot 
 
-- Open hotspot dasboard and contact me on Discord private message for password. You can change it once logged in
+- Open hotspot dashboard and contact me on Discord private message for password. You can change it once logged in
 
 I have edited multiple files with your hotspot details. Your controllino should boot up and work just fine. Image is created from my controllino in July which had 2022.07.14.0 miner and 1.3.7 dashboard version. 
