@@ -38,7 +38,13 @@ rPi serial # lookup:
 --------------------------------------------
 -OPTION 2 (directly from rPi)-
 
-- Load Raspbian OS on SD card and boot up rPi.  
+- Get the latest Raspberry Pi OS imager from here https://www.raspberrypi.com/software/
+
+- Choose operating system rPi OS other > rPi OS Lite (32 or 64bit)
+
+- Choose storage SD card and press write. I suggest you use a spare SD card, size does not matter it can be larger or smaller than 32gb
+
+- Once the OS loads on SD card put it to rPi and boot it up
 
 - Connect monitor/screen and keyboard to rPi. User is `pi` and default passowrd is `raspberry`
 
