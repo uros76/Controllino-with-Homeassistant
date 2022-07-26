@@ -58,12 +58,13 @@ Once I have the data I will creat the custom image for you.
 
 --------------------------------------------
 --------------------------------------------
-Part 2 (burning the custom image to your SD card): 
+Part 2 (burning the custom image to your SD card, this is done after you recieve your image from me): 
 - On Windows pc, download image to your harddrive. Make a new folder on C: drive and store the image there for easy access
 
-- Boot your pc with live linux loaded on USB stick. It can be ubuntu or mint or any debian flavor linux. I use Linux Mint Mate edition from here https://www.linuxmint.com/download.php
+- Boot your pc with live linux loaded on USB stick. I prefer to do it direct from linux since it has native ext4 partition support. There are windows image writing software out there, I just don't use it. 
+It can be ubuntu or mint or any debian flavor linux. I use Linux Mint Mate edition from here https://www.linuxmint.com/download.php
 
-- Open File Browser and navigate to pc hard drive and location to the image file
+- Once you have live linux bootd up open File Browser and navigate to your pc hard drive and location to the image file
 
 - Write down or remember the path to image file. Here is my example of full path in live linux to the image file which sits on pc harddrive...
 /media/mint/68F4150CF414DDDE/folder/controllino.img
