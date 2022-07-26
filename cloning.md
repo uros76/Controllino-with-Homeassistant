@@ -46,7 +46,7 @@ rPi serial # lookup:
 
 - Once the OS loads on SD card put it to rPi and boot it up
 
-- Connect monitor/screen and keyboard to rPi. User is `pi` and default passowrd is `raspberry`
+- Connect monitor/screen and keyboard to rPi. Optional but advisable > connect LAN cable so you can test the network connectivity. User for terminal is `pi` and default passowrd is `raspberry`
 
 - Execute these comamnds in shell. Remember to copy the outputs for later
 
@@ -59,12 +59,16 @@ Wifi MAC adress lookup:
 rPi serial # lookup:
 `cat /proc/cpuinfo | grep Serial | cut -d ' ' -f 2`
 
+- Optional step to test connectivity. In terminal window run this command `ping www.google.com`. You should not see errors
+
 Regardless of option you choose, send the obtained data to me including your hotspot helium name. 
 Once I have the data I will creat the custom image for you. 
 
 --------------------------------------------
 --------------------------------------------
 Part 2 (burning the custom image to your SD card, this is done after you recieve your image from me): 
+Before proceding with image loading make sure you test the rPi if it boots up from Raspbian OS and if network works. 
+
 - On Windows pc, download image to your harddrive. Make a new folder on C: drive and store the image there for easy access
 
 - Boot your pc with live linux loaded on USB stick. I prefer to do it direct from linux since it has native ext4 partition support. There are windows image writing software out there, I just don't use it. 
