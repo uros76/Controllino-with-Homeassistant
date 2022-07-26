@@ -1,4 +1,4 @@
-Below are instructions for burning the backup cloned image to your controllino hotspot. 
+Below are instructions for writing the backup cloned image to your controllino hotspot SD card. 
 
 Before you proceed you need to be aware I take no responsibility for mistakes you could do in the process. If you follow instruction steps everything should work ok. If there is any error or issue with any of below steps contact me imediately. 
 And remember, opening controllino hotspot voids warranty. Make sure you use official support before anything else. 
@@ -61,8 +61,8 @@ rPi serial # lookup:
 
 - Optional step to test connectivity. In terminal window run this command `ping www.google.com`. You should not see errors
 
-Regardless of option you choose, send the obtained data to me including your hotspot helium name. 
-Once I have the data I will creat the custom image for you. 
+Regardless of option you choose, send me on Discord private message LAN and Wifi MAC adress, rPi serial number and your hotspot helium name. 
+Once I have the data I will create the custom image for you. 
 
 --------------------------------------------
 --------------------------------------------
@@ -94,6 +94,6 @@ Drive name in my case is mmcblk0, we don't need partition number
 
 - Let hotspot work at least 10mins after first boot 
 
-- Open hotspot dasboard and contact me for password. You can change it once logged in
+- Open hotspot dasboard and contact me on Discord private message for password. You can change it once logged in
 
 I have edited multiple files with your hotspot details. Your controllino should boot up and work just fine. Image is created from my controllino in July which had 2022.07.14.0 miner and 1.3.7 dashboard version. 
