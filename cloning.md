@@ -4,9 +4,9 @@ Before you proceed you need to be aware I take no responsibility for mistakes yo
 And remember, opening controllino hotspot voids warranty. Make sure you use official support before anything else. 
 
 --------------------------------------------
-Part 1 (obtain basic data needed to create custom image): 
+PART 1 (obtain basic data needed to create custom image): 
 
--OPTION 1 (over temporary SSH access, no need to connect monitor on rPi)-
+-Option 1 (over temporary SSH access, no need to connect monitor on rPi)-
 
 - Get the latest Raspberry Pi OS imager from here https://www.raspberrypi.com/software/
 
@@ -36,7 +36,7 @@ rPi serial # lookup:
 `cat /proc/cpuinfo | grep Serial | cut -d ' ' -f 2`
 
 --------------------------------------------
--OPTION 2 (directly from rPi)-
+-Option 2 (directly from rPi)-
 
 - Get the latest Raspberry Pi OS imager from here https://www.raspberrypi.com/software/
 
@@ -66,7 +66,7 @@ Once I have the data I will create the custom image for you.
 
 --------------------------------------------
 --------------------------------------------
-Part 2 (burning the custom image to your SD card, this is done after you recieve your image from me).  
+PART 2 (burning the custom image to your SD card, this is done after you recieve your image from me).  
 Before proceding with image loading make sure you test the rPi if it boots up from Raspbian OS and if network works. 
 If you followed above steps and rPi was working with fresh Raspberry OS then you are ok to proceed with below steps. 
 If your hotspot rPi failed to load fresh Raspberry OS then you have hardware problem. Either the rPi board or Lora module is faulty in which case this guide cannot help you. 
