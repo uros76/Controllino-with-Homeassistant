@@ -3,6 +3,8 @@ Below are instructions for writing the backup cloned image to your controllino h
 Before you proceed you need to be aware I take no responsibility for mistakes you could do in the process. If you follow instruction steps everything should work ok. Make sure you also test booting your hotspot with spare power supply. If there is any error or issue with any of below steps contact me imediately. 
 And remember, opening controllino hotspot voids warranty. Make sure you use official support before anything else. 
 
+Edit 11.8.: before everything below it is important you obtain your hotspot Upswift Service device_token from Controllino support. Without this token/key you will lose remote support... 
+
 --------------------------------------------
 PART 1 (obtain basic data needed to create custom image): 
 
