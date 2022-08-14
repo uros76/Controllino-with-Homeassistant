@@ -37,7 +37,7 @@ Wifi MAC adress lookup:
 rPi serial # lookup:
 `cat /proc/cpuinfo | grep Serial | cut -d ' ' -f 2`
 
-- Type sudo `shutdown now` to safely shutdown rPi 
+- Type `sudo shutdown now` to safely shutdown rPi 
 
 --------------------------------------------
 -Option 2 (directly from rPi)-
@@ -65,7 +65,7 @@ rPi serial # lookup:
 
 - Optional step to test connectivity. In terminal window run this command `ping www.google.com`. You should not see errors
 
-- Type sudo `shutdown now` to safely shutdown rPi
+- Type `sudo shutdown now` to safely shutdown rPi
 
 Regardless of option you choose, send me on Discord private message LAN and Wifi MAC adress, rPi serial number and your hotspot helium name. 
 Once I have the data I will create the custom image for you. 
