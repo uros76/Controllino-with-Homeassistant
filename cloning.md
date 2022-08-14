@@ -3,7 +3,7 @@ Below are instructions for writing the backup cloned image to your controllino h
 Before you proceed you need to be aware I take no responsibility for mistakes you could do in the process. If you follow instruction steps everything should work ok. Make sure you also test booting your hotspot with spare power supply. If there is any error or issue with any of below steps contact me imediately. 
 And remember, opening controllino hotspot voids warranty. Make sure you use official support before anything else. 
 
-Edit 11.8.: before everything below it is important you obtain your hotspot Upswift Service device_token from Controllino support. Without this token/key you will lose remote support... 
+Edit 11.8.: before everything below, it is important you obtain your hotspot Upswift Service device_token from Controllino support. Without this token/key you will lose remote support... 
 
 --------------------------------------------
 PART 1 (obtain basic data needed to create custom image): 
@@ -37,6 +37,8 @@ Wifi MAC adress lookup:
 rPi serial # lookup:
 `cat /proc/cpuinfo | grep Serial | cut -d ' ' -f 2`
 
+- Type sudo `shutdown now` to safely shutdown rPi 
+
 --------------------------------------------
 -Option 2 (directly from rPi)-
 
@@ -62,6 +64,8 @@ rPi serial # lookup:
 `cat /proc/cpuinfo | grep Serial | cut -d ' ' -f 2`
 
 - Optional step to test connectivity. In terminal window run this command `ping www.google.com`. You should not see errors
+
+- Type sudo `shutdown now` to safely shutdown rPi
 
 Regardless of option you choose, send me on Discord private message LAN and Wifi MAC adress, rPi serial number and your hotspot helium name. 
 Once I have the data I will create the custom image for you. 
@@ -98,6 +102,8 @@ Drive name in my case is mmcblk0, we don't need partition number
 
 - Let hotspot work at least 10mins after first boot 
 
-- Open hotspot dashboard and contact me on Discord private message for password. You can change it once logged in
+- Open hotspot dashboard and contact me on Discord private message for temporary password. You need to change it once logged in
+
+- After about 10min of work check miner version on dashboard. It needs to be latest updated, higher than July version mentioned below
 
 I have edited multiple files with your hotspot details. Your controllino should boot up and work just fine. Image is created from my controllino in July which had 2022.07.14.0 miner and 1.3.7 dashboard version. 
