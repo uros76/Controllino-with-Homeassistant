@@ -9,7 +9,7 @@ Edit 16.8.: I developed a custom shell script that pulls your hotspot data and f
 Part 1 of this guide is not needed anymore!
 
 --------------------------------------------
-~~PART 1 (obtain basic data needed to create custom image): ~~
+~~PART 1 (obtain basic data needed to create custom image):~~
 
 ~~-Option 1 (over temporary SSH access, no need to connect monitor on rPi)-~~
 
@@ -23,35 +23,35 @@ Part 1 of this guide is not needed anymore!
 
 ~~- Once the OS loads on SD card put it to rPi and boot it up~~
 
-~~- On windows PC download latest Putty software from here https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html 
+~~- On windows PC download latest Putty software from here https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html~~
 
-~~- Open Putty app and connect to rPi ssh port 22 entering IP adress into host name 
+~~- Open Putty app and connect to rPi ssh port 22 entering IP adress into host name~~
 
-~~- Use user name and passowrd you defined above
+~~- Use user name and passowrd you defined above~~
 
-~~- Execute these comamnds in putty terminal window. Remember to copy the outputs for later
+~~- Execute these comamnds in putty terminal window. Remember to copy the outputs for later~~
 
 ~~LAN MAC adress lookup:
-`cat /sys/class/net/eth0/address`
+`cat /sys/class/net/eth0/address`~~
 
 ~~Wifi MAC adress lookup:
-`cat /sys/class/net/wlan0/address`
+`cat /sys/class/net/wlan0/address`~~
 
 ~~rPi serial # lookup:
-`cat /proc/cpuinfo | grep Serial | cut -d ' ' -f 2`
+`cat /proc/cpuinfo | grep Serial | cut -d ' ' -f 2`~~
 
-~~- Type `sudo shutdown now` to safely shutdown rPi 
+~~- Type `sudo shutdown now` to safely shutdown rPi ~~
 
 --------------------------------------------
-~~-Option 2 (directly from rPi)-
+~~-Option 2 (directly from rPi)~~
 
-~~- Get the latest Raspberry Pi OS imager from here https://www.raspberrypi.com/software/
+~~- Get the latest Raspberry Pi OS imager from here https://www.raspberrypi.com/software/~~
 
-~~- Choose operating system rPi OS other > rPi OS Lite (32 or 64bit)
+~~- Choose operating system rPi OS other > rPi OS Lite (32 or 64bit)~~
 
-~~- Choose storage SD card and press write. I suggest you use a spare SD card, size does not matter it can be larger or smaller than 32gb
+~~- Choose storage SD card and press write. I suggest you use a spare SD card, size does not matter it can be larger or smaller than 32gb~~
 
-~~- Once the OS loads on SD card put it to rPi and boot it up
+~~- Once the OS loads on SD card put it to rPi and boot it up~~
 
 ~~- Connect monitor/screen and keyboard to rPi. Optional but advisable > connect LAN cable so you can test the network connectivity. User for terminal is `pi` and default passowrd is `raspberry`
 
