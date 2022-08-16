@@ -100,10 +100,10 @@ Drive name in my case is mmcblk0, we don't need partition number
 
 - Once the restore is done, shutdown live linux and put SD card to controllino 
 
-- Let hotspot work at least 10mins after first boot 
+- Turn on your hotspot and let it work 10mins during first boot. This is important, do not open dashboard or do anything with hotspot during this time 
 
 - Open hotspot dashboard and contact me on Discord private message for temporary password. You need to change it once logged in
 
-- Af the next full hour, check miner version on dashboard. It needs to be latest updated, higher than July version mentioned below
+- Check miner version on dashboard. If everything went well on first boot your miner needs to be the latest. On 12.8. date the latest verion was 2022.08.02.0
 
-I have edited multiple files with your hotspot details. Your controllino should boot up and work just fine. Image is created from my controllino in July which had 2022.07.14.0 miner and 1.3.7 dashboard version. 
+There are multiple files edited with your hotspot details. Your controllino should boot up and work just fine. Image is created from my controllino in August which had 2022.08.02.0 miner and 1.3.7 dashboard version. 
