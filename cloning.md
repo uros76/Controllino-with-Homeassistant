@@ -11,7 +11,7 @@ Part 1 of this guide is not needed anymore!
 --------------------------------------------
 ~~PART 1 (obtain basic data needed to create custom image):~~
 
-~~-Option 1 (over temporary SSH access, no need to connect monitor on rPi)-~~
+~~-Option 1 (over temporary SSH access, no need to connect monitor on rPi)~~
 
 ~~- Get the latest Raspberry Pi OS imager from here https://www.raspberrypi.com/software/~~
 
@@ -19,7 +19,7 @@ Part 1 of this guide is not needed anymore!
 
 ~~- Press on settings gear icon (bottom right) and enable SSH with specify your password. This SSH access will not be used on your controllino, this is just temporary to get the necesary data~~
 
-~~- Click save on settigns page, choose storage SD card and press write. I suggest you use a spare SD card, size does not matter it can be larger or smaller than 32gb
+~~- Click save on settigns page, choose storage SD card and press write. I suggest you use a spare SD card, size does not matter it can be larger or smaller than 32gb~~
 
 ~~- Once the OS loads on SD card put it to rPi and boot it up~~
 
@@ -40,7 +40,7 @@ Part 1 of this guide is not needed anymore!
 ~~rPi serial # lookup:
 `cat /proc/cpuinfo | grep Serial | cut -d ' ' -f 2`~~
 
-~~- Type `sudo shutdown now` to safely shutdown rPi ~~
+~~- Type `sudo shutdown now` to safely shutdown rPi~~
 
 --------------------------------------------
 ~~-Option 2 (directly from rPi)~~
@@ -53,25 +53,25 @@ Part 1 of this guide is not needed anymore!
 
 ~~- Once the OS loads on SD card put it to rPi and boot it up~~
 
-~~- Connect monitor/screen and keyboard to rPi. Optional but advisable > connect LAN cable so you can test the network connectivity. User for terminal is `pi` and default passowrd is `raspberry`
+~~- Connect monitor/screen and keyboard to rPi. Optional but advisable > connect LAN cable so you can test the network connectivity. User for terminal is `pi` and default passowrd is `raspberry`~~
 
-~~- Execute these comamnds in shell. Remember to copy the outputs for later
+~~- Execute these comamnds in shell. Remember to copy the outputs for later~~
 
 ~~LAN MAC adress lookup:
-`cat /sys/class/net/eth0/address`
+`cat /sys/class/net/eth0/address`~~
 
 ~~Wifi MAC adress lookup:
-`cat /sys/class/net/wlan0/address`
+`cat /sys/class/net/wlan0/address`~~
 
 ~~rPi serial # lookup:
-`cat /proc/cpuinfo | grep Serial | cut -d ' ' -f 2`
+`cat /proc/cpuinfo | grep Serial | cut -d ' ' -f 2`~~
 
-~~- Optional step to test connectivity. In terminal window run this command `ping www.google.com`. You should not see errors
+~~- Optional step to test connectivity. In terminal window run this command `ping www.google.com`. You should not see errors~~
 
-~~- Type `sudo shutdown now` to safely shutdown rPi
+~~- Type `sudo shutdown now` to safely shutdown rPi~~
 
 ~~Regardless of option you choose, send me on Discord private message LAN and Wifi MAC adress, rPi serial number and your hotspot helium name. 
-Once I have the data I will create the custom image for you. 
+Once I have the data I will create the custom image for you.~~
 
 --------------------------------------------
 --------------------------------------------
