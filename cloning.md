@@ -3,8 +3,6 @@ Below are instructions for writing the backup cloned image to your controllino h
 Before you proceed you need to be aware I take no responsibility for mistakes you could do in the process. If you follow instruction steps everything should work ok. Make sure you also test booting your hotspot with spare power supply. If there is any error or issue with any of below steps contact me imediately. 
 And remember, opening controllino hotspot voids warranty. Make sure you use official support before anything else. 
 
-Edit 11.8.: before everything below, it is important you obtain your hotspot Upswift Service device_token from Controllino support. Without this token/key you will lose remote support... 
-
 Edit 16.8.: I developed a custom shell script that pulls your hotspot data and fills it into necesary files after first bootup from SD clone image. 
 Part 1 of this guide is not needed anymore!
 
@@ -74,10 +72,8 @@ Part 1 of this guide is not needed anymore!
 Once I have the data I will create the custom image for you.~~
 
 --------------------------------------------
---------------------------------------------
-PART 2 (burning the custom image to your SD card, this is done after you recieve your image from me).  
-Before proceding with image loading make sure you test the rPi if it boots up from Raspbian OS and if network works. 
-If you followed above steps and rPi was working with fresh Raspberry OS then you are ok to proceed with below steps. 
+PART 2 (burning the custom image to your SD card, this is done after you recieve image link from me).  
+Before proceding with image loading I advise you test the rPi if it boots up from Raspbian OS and if network connection works. 
 If your hotspot rPi failed to load fresh Raspberry OS then you have hardware problem. Either the rPi board or Lora module is faulty in which case this guide cannot help you. 
 
 - On Windows pc, download image to your harddrive. Make a new folder on C: drive and store the image there for easy access
@@ -101,12 +97,12 @@ Drive name in my case is mmcblk0, we don't need partition number
 
 - You will see progress of image burning. It should take 10-20mins. Do not interrupt or do anything on pc during this time
 
-- Once the restore is done, shutdown live linux and put SD card to controllino 
+- Once the restore is done, shutdown live linux and put SD card to your controllino hotspot
 
 - Turn on your hotspot and let it work 10mins during first boot. This is important, do not open dashboard or do anything with hotspot during this time 
 
-- Open hotspot dashboard and contact me on Discord private message for temporary password. You need to change it once logged in
+- Open hotspot dashboard and use temporary password `controllino22`. You need to change the password once logged in
 
-- Check miner version on dashboard. If everything went well on first boot your miner needs to be the latest. On 12.8. date the latest verion was 2022.08.02.0
+- Check miner version on dashboard. If everything went well on first boot your miner needs to be the latest. On 15.8. date the latest verion was 2022.08.02.0
 
-There are multiple files edited with your hotspot details. Your controllino should boot up and work just fine. Image is created from my controllino in August which had 2022.08.02.0 miner and 1.3.7 dashboard version. 
+During first bootup there are multiple files edited with your hotspot details. Your controllino should boot up and work just fine. Image is created from my controllino in August which had 2022.08.02.0 miner and 1.3.7 dashboard version. 
