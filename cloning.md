@@ -104,6 +104,6 @@ Drive name in my case is mmcblk0, we don't need partition number
 
 - Open hotspot dashboard and contact me on Discord private message for temporary password. You need to change it once logged in
 
-- After about 10min of work check miner version on dashboard. It needs to be latest updated, higher than July version mentioned below
+- Af the next full hour, check miner version on dashboard. It needs to be latest updated, higher than July version mentioned below
 
 I have edited multiple files with your hotspot details. Your controllino should boot up and work just fine. Image is created from my controllino in July which had 2022.07.14.0 miner and 1.3.7 dashboard version. 
