@@ -9,19 +9,19 @@ Edit 16.8.: I developed a custom shell script that pulls your hotspot data and f
 Part 1 of this guide is not needed anymore!
 
 --------------------------------------------
-~~PART 1 (obtain basic data needed to create custom image): 
+~~PART 1 (obtain basic data needed to create custom image): ~~
 
-~~-Option 1 (over temporary SSH access, no need to connect monitor on rPi)-
+~~-Option 1 (over temporary SSH access, no need to connect monitor on rPi)-~~
 
-~~- Get the latest Raspberry Pi OS imager from here https://www.raspberrypi.com/software/
+~~- Get the latest Raspberry Pi OS imager from here https://www.raspberrypi.com/software/~~
 
-~~- Choose operating system rPi OS other > rPi OS Lite (32 or 64bit)
+~~- Choose operating system rPi OS other > rPi OS Lite (32 or 64bit)~~
 
-~~- Press on settings gear icon (bottom right) and enable SSH with specify your password. This SSH access will not be used on your controllino, this is just temporary to get the necesary data
+~~- Press on settings gear icon (bottom right) and enable SSH with specify your password. This SSH access will not be used on your controllino, this is just temporary to get the necesary data~~
 
 ~~- Click save on settigns page, choose storage SD card and press write. I suggest you use a spare SD card, size does not matter it can be larger or smaller than 32gb
 
-~~- Once the OS loads on SD card put it to rPi and boot it up
+~~- Once the OS loads on SD card put it to rPi and boot it up~~
 
 ~~- On windows PC download latest Putty software from here https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html 
 
