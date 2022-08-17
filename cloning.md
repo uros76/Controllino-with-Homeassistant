@@ -5,6 +5,7 @@ And remember, opening controllino hotspot voids warranty. Make sure you use offi
 
 Edit 16.8.: I developed a custom shell script that pulls your hotspot data and fills it into necesary files after first bootup from SD clone image. 
 Part 1 of this guide is not needed anymore!
+There is a chance you will still need to take some aditional steps to get the upswift service working on your hotspot. I will keep updating this guide when I know more from official support. 
 
 --------------------------------------------
 ~~PART 1 (obtain basic data needed to create custom image):~~
