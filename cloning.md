@@ -111,6 +111,7 @@ During first bootup there are multiple files edited with your hotspot details. Y
 
 I appreciate any support of my work. If you feel thankful, you can buy me a virtual beer by transfering symbolic HNT amount to my helium wallet: 13j9f1yRNSpjWBmXG1bdUgABRvdiZuHDeZCdCD9cYS8rTFycZsx
 
-![image](https://user-images.githubusercontent.com/25409772/185715235-3a1b96db-7eb7-4656-9cf2-e135ab10b3a9.png)
+![share__2022-08-20_00_34_34_2](https://user-images.githubusercontent.com/25409772/185715925-91517096-ad34-4c5e-a912-1965f5afc71d.jpg)
+
 
 
