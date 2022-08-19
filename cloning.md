@@ -73,7 +73,7 @@ There is a chance you will still need to take some aditional steps to get the up
 Once I have the data I will create the custom image for you.~~
 
 --------------------------------------------
-PART 2 (burning the custom image to your SD card, this is done after you recieve image link from me).  
+PART 2 (burning the image to your SD card, this is done after you recieve image link from me).  
 Before proceding with image loading I advise you test the rPi if it boots up from Raspbian OS and if network connection works. 
 If your hotspot rPi failed to load fresh Raspberry OS then you have hardware problem. Either the rPi board or Lora module is faulty in which case this guide cannot help you. 
 
@@ -104,7 +104,7 @@ Drive name in my case is mmcblk0, we don't need partition number
 
 - Open hotspot dashboard and use temporary password `controllino22`. You need to change the password once logged in
 
-- Check miner version on dashboard. If everything went well on first boot your miner needs to be the latest. On 15.8. date the latest verion was 2022.08.02.0
+- Check miner version on dashboard. If everything went well on first boot your miner needs to be the latest. On 16.8. date the latest verion was 2022.08.02.0
 
 During first bootup there are multiple files edited with your hotspot details. Your controllino should boot up and work just fine. Image is created from my controllino in August which had 2022.08.02.0 miner and 1.3.7 dashboard version. 
 
