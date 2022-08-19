@@ -109,4 +109,7 @@ Drive name in my case is mmcblk0, we don't need partition number
 During first bootup there are multiple files edited with your hotspot details. Your controllino should boot up and work just fine. Image is created from my controllino in August which had 2022.08.02.0 miner and 1.3.7 dashboard version. 
 
 
-I appreciate any support of my work. If you feel thankful you can buy me a virtual beer, by transfering symbolic HNT amount to my helium wallet: 13j9f1yRNSpjWBmXG1bdUgABRvdiZuHDeZCdCD9cYS8rTFycZsx
+I appreciate any support of my work. If you feel thankful, you can buy me a virtual beer by transfering symbolic HNT amount to my helium wallet: 13j9f1yRNSpjWBmXG1bdUgABRvdiZuHDeZCdCD9cYS8rTFycZsx
+![image](https://user-images.githubusercontent.com/25409772/185715235-3a1b96db-7eb7-4656-9cf2-e135ab10b3a9.png)
+
+
