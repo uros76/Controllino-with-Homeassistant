@@ -1,7 +1,7 @@
 Below are instructions for writing the backup cloned image to your controllino hotspot SD card. 
 
 Before you proceed you need to be aware I take no responsibility for mistakes you could do in the process. If you follow instruction steps everything should work ok. Make sure you also test booting your hotspot with spare power supply. If there is any error or issue with any of below steps contact me imediately. 
-And remember, opening controllino hotspot voids warranty. Make sure you use official support before anything else. 
+And remember, opening your controllino hotspot voids warranty. Make sure you use official support before anything else. 
 
 Edit 16.8.: I developed a custom shell script that pulls your hotspot data and fills it into necesary files after first bootup from SD clone image. 
 Part 1 of this guide is not needed anymore!
@@ -74,8 +74,9 @@ Once I have the data I will create the custom image for you.~~
 
 --------------------------------------------
 PART 2 (burning the image to your SD card, this is done after you recieve image link from me).  
-Before proceding with image loading I advise you test the rPi if it boots up from Raspbian OS and if network connection works. 
+Before proceding with image loading I advise you test the rPi if it boots up from Raspbian OS and if network connection works. I wrote how to test your rPi above in Part 1 of guide. 
 If your hotspot rPi failed to load fresh Raspberry OS then you have hardware problem. Either the rPi board or Lora module is faulty in which case this guide cannot help you. 
+Some users told me they flashed the image with raspberry os flash tool or even with app called rufus. I prefer to flash with linux enviroment. Below steps are for flashing with linux os. 
 
 - On Windows pc, download image to your harddrive. Make a new folder on C: drive and store the image there for easy access
 
@@ -100,7 +101,10 @@ Drive name in my case is mmcblk0, we don't need partition number
 
 - Once the restore is done, shutdown live linux and put SD card to your controllino hotspot
 
-- Turn on your hotspot and let it work 10mins during first boot. This is important, do not open dashboard or do anything with hotspot during this time 
+
+Next steps need to follow after you flash the image, with windows or linux. 
+
+- Turn on your hotspot and let it work 10mins during first boot. THIS IS IMPORTANT, do not open dashboard or do anything with hotspot during this time 
 
 - Open hotspot dashboard and use temporary password `controllino22`. You need to change the password once logged in
 
