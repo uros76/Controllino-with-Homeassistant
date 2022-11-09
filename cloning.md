@@ -76,9 +76,10 @@ Once I have the data I will create the custom image for you.~~
 PART 2 (burning the image to your SD card, this is done after you recieve image link from me).  
 Before proceding with image loading I advise you test the rPi if it boots up from Raspbian OS and if network connection works. I wrote how to test your rPi above in Part 1 of guide. 
 If your hotspot rPi failed to load fresh Raspberry OS then you have hardware problem. Either the rPi board or Lora module is faulty in which case this guide cannot help you. 
-Some users told me they flashed the image with raspberry os flash tool or even with app called rufus. I prefer to flash with linux enviroment. Below steps are for flashing with linux os. 
+Some users told me they flashed the image with Windows Raspberry os flash tool or even with app called Rufus. 
+I prefer to flash with linux enviroment. Below steps are for flashing with linux os. 
 
-- On Windows pc, download image to your harddrive. Make a new folder on C: drive and store the image there for easy access
+- Download image to your PC harddrive. Make a new folder on your PC drive and store the image there for easy access
 
 - Boot your pc with live linux loaded on USB stick. I prefer to do it direct from linux since it has native ext4 partition support. There are windows image writing software out there, I just don't use it. 
 It can be ubuntu or mint or any debian flavor linux. I use Linux Mint Mate edition from here https://www.linuxmint.com/download.php
