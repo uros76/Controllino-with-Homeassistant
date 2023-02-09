@@ -3,116 +3,37 @@ Below are instructions for writing the backup cloned image to your controllino h
 Before you proceed you need to be aware I take no responsibility for mistakes you could do in the process. If you follow instruction steps everything should work ok. Make sure you also test booting your hotspot with spare power supply. If there is any error or issue with any of below steps contact me imediately. 
 And remember, opening your controllino hotspot voids warranty. Make sure you use official support before anything else. 
 
-Edit 16.8.: I developed a custom shell script that pulls your hotspot data and fills it into necesary files after first bootup from SD clone image. 
+Edit 16.8.22.: I developed a custom shell script that pulls your hotspot data and fills it into necesary files after first bootup from SD clone image. 
 Part 1 of this guide is not needed anymore!
 There is a chance you will still need to take some aditional steps to get the upswift service working on your hotspot. I will keep updating this guide when I know more from official support. 
 
---------------------------------------------
-~~PART 1 (obtain basic data needed to create custom image):~~
-
-~~-Option 1 (over temporary SSH access, no need to connect monitor on rPi)~~
-
-~~- Get the latest Raspberry Pi OS imager from here https://www.raspberrypi.com/software/~~
-
-~~- Choose operating system rPi OS other > rPi OS Lite (32 or 64bit)~~
-
-~~- Press on settings gear icon (bottom right) and enable SSH with specify your password. This SSH access will not be used on your controllino, this is just temporary to get the necesary data~~
-
-~~- Click save on settigns page, choose storage SD card and press write. I suggest you use a spare SD card, size does not matter it can be larger or smaller than 32gb~~
-
-~~- Once the OS loads on SD card put it to rPi and boot it up~~
-
-~~- On windows PC download latest Putty software from here https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html~~
-
-~~- Open Putty app and connect to rPi ssh port 22 entering IP adress into host name~~
-
-~~- Use user name and passowrd you defined above~~
-
-~~- Execute these comamnds in putty terminal window. Remember to copy the outputs for later~~
-
-~~LAN MAC adress lookup:
-`cat /sys/class/net/eth0/address`~~
-
-~~Wifi MAC adress lookup:
-`cat /sys/class/net/wlan0/address`~~
-
-~~rPi serial # lookup:
-`cat /proc/cpuinfo | grep Serial | cut -d ' ' -f 2`~~
-
-~~- Type `sudo shutdown now` to safely shutdown rPi~~
+Edit 9.2.23.: with one our friends from community I managed to get my hands on latest SD card image with dashboard 1.4.3 and SSH enabled. I edited the necesary files and added my one time run script which prepares individual hotspot. Now we have a new universal image for controllino hotspots. Unfortunately we lost the ability of remote support from controllino due to recent change from upswift to rport service. This means all the software maintenance is on the user now. Miner should keep updating automaticaly. 
 
 --------------------------------------------
-~~-Option 2 (directly from rPi)~~
+PART 1.: Check if your rPi works over temporary SSH access (no need to connect monitor on rPi)
+- Get the latest Raspberry Pi OS imager from here https://www.raspberrypi.com/software/
+- Choose operating system rPi OS other > rPi OS Lite (32 or 64bit)
+- Press on settings gear icon (bottom right) and enable SSH with specify your password. This SSH access will not be used on your controllino, this is just temporary to test your rPi
+- Click save on settings page, choose storage SD card and press write. I suggest you use a spare SD card, size does not matter it can be larger or smaller than 32gb
+- Once the OS loads on SD card put it to rPi and boot it up
+- On windows PC download latest Putty software from here https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+- Open Putty app and connect to rPi ssh port 22 entering IP adress into host name
+- Use user name pi and passowrd you defined above 
+- At this stage if you connected to your rPi this means it's working and it's LAN port too. You can proceed to flashing the universal controllino image
 
-~~- Get the latest Raspberry Pi OS imager from here https://www.raspberrypi.com/software/~~
-
-~~- Choose operating system rPi OS other > rPi OS Lite (32 or 64bit)~~
-
-~~- Choose storage SD card and press write. I suggest you use a spare SD card, size does not matter it can be larger or smaller than 32gb~~
-
-~~- Once the OS loads on SD card put it to rPi and boot it up~~
-
-~~- Connect monitor/screen and keyboard to rPi. Optional but advisable > connect LAN cable so you can test the network connectivity. User for terminal is `pi` and default passowrd is `raspberry`~~
-
-~~- Execute these comamnds in shell. Remember to copy the outputs for later~~
-
-~~LAN MAC adress lookup:
-`cat /sys/class/net/eth0/address`~~
-
-~~Wifi MAC adress lookup:
-`cat /sys/class/net/wlan0/address`~~
-
-~~rPi serial # lookup:
-`cat /proc/cpuinfo | grep Serial | cut -d ' ' -f 2`~~
-
-~~- Optional step to test connectivity. In terminal window run this command `ping www.google.com`. You should not see errors~~
-
-~~- Type `sudo shutdown now` to safely shutdown rPi~~
-
-~~Regardless of option you choose, send me on Discord private message LAN and Wifi MAC adress, rPi serial number and your hotspot helium name. 
-Once I have the data I will create the custom image for you.~~
+If your hotspot rPi failed to load fresh Raspberry OS then you have hardware problem. Either the rPi board or Lora module is faulty in which case this guide cannot help you. THere is no point in procedding to PART 2 until you resolve hardware problem. 
 
 --------------------------------------------
-PART 2 (burning the image to your SD card, this is done after you recieve image link from me).  
-Before proceding with image loading I advise you test the rPi if it boots up from Raspbian OS and if network connection works. I wrote how to test your rPi above in Part 1 of guide. 
-If your hotspot rPi failed to load fresh Raspberry OS then you have hardware problem. Either the rPi board or Lora module is faulty in which case this guide cannot help you. 
-Some users told me they flashed the image with Windows Raspberry os flash tool or even with app called Rufus. 
-I prefer to flash with linux enviroment. Below steps are for flashing with linux os. 
-
-- Download image to your PC harddrive. Make a new folder on your PC drive and store the image there for easy access
-
-- Boot your pc with live linux loaded on USB stick. I prefer to do it direct from linux since it has native ext4 partition support. There are windows image writing software out there, I just don't use it. 
-It can be ubuntu or mint or any debian flavor linux. I use Linux Mint Mate edition from here https://www.linuxmint.com/download.php
-
-- Once you have live linux booted up open File Browser and navigate to your pc hard drive and location to the image file
-
-- Write down or remember the path to image file. Here is my example of full path in live linux to the image file which sits on pc harddrive...
-/media/mint/68F4150CF414DDDE/folder/controllino.img
-
-- Open Terminal and run `sudo su` command to gain root privileges 
-
-- Run `df` command in terminal window and check exact drive name of your SD card. You will see partition list, focus on the one with about 30gb capacity. Here is my example: 
-/dev/mmcblk0p2
-Drive name in my case is mmcblk0, we don't need partition number
-
-- Run this command to initate image burn process. Be careful to replace path to image file and your SD card drive name in this command: 
-`dd if=/media/mint/68F4150CF414DDDE/folder/controllino.img of=/dev/mmcblk0 status=progress`
-
-- You will see progress of image burning. It should take 10-20mins. Do not interrupt or do anything on pc during this time
-
-- Once the restore is done, shutdown live linux and put SD card to your controllino hotspot
-
-
-Next steps need to follow after you flash the image, with windows or linux. 
-
-- Turn on your hotspot and let it work 10mins during first boot. THIS IS IMPORTANT, do not open dashboard or do anything with hotspot during this time 
-
-- Open hotspot dashboard and use temporary password `controllino22`. You need to change the password once logged in
-
-- Check miner version on dashboard. If everything went well on first boot your miner needs to be the latest. On 16.8. date the latest verion was 2022.08.02.0
-
-During first bootup there are multiple files edited with your hotspot details. Your controllino should boot up and work just fine. Image is created from my controllino in August which had 2022.08.02.0 miner and 1.3.7 dashboard version. 
-
+PART 2.: Flashing the universal controllino image to your SD card  
+- On windows PC download latest version of Rusuf https://rufus.ie/downloads/. You can use linux and dd command too. Do not use balena etcher! 
+- Download universal controllino image to your PC
+- Start the flashing with rufus app to your new SD card. It should take 10-20mins. Do not interrupt or do anything on pc during this time
+- Once the restore is done, put SD card to your controllino hotspot 
+- Turn on your hotspot and let it work 10mins during first boot. THIS IS VERY IMPORTANT, do not open dashboard or do anything with hotspot during this time 
+- Open hotspot dashboard and use temporary password `controllino22` for image with 1.3.7 dashboard OR password `controllino@2023` for image with 1.4.3 dashboard. You need to change the password once logged in!
+- Check miner version on dashboard. If everything went well on first boot your miner version needs to be the latest
+- During first bootup there are multiple files edited with your hotspot details. Your controllino should boot up and work just fine. Image with dasboard 1.3.7 is created from my controllino in August which and the image with 1.4.3 dashboard is created from different controllino from community friend. 
+- Image with dashboard 1.4.3 also has SSH service enabled on port 22. You can connect to it same as described in PART 1 but with user `admin` and password `controllino@2023`. Once logged to SSH you need to change the password! You can do that by running command `passwd` and follow the instructions. 
 
 I appreciate any support of my work. If you feel thankful, you can buy me a virtual beer by transfering symbolic HNT amount to my helium wallet: 13j9f1yRNSpjWBmXG1bdUgABRvdiZuHDeZCdCD9cYS8rTFycZsx
 
