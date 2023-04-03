@@ -35,9 +35,7 @@ PART 2.: Flashing the universal controllino image to your SD card
 - During first bootup there are multiple files edited with your hotspot details. Your controllino should boot up and work just fine. Image with dasboard 1.3.7 is created from my controllino in August which and the image with 1.4.3 dashboard is created from different controllino from community friend. 
 - Image with dashboard 1.4.3 also has SSH service enabled on port 22. You can connect to it same as described in PART 1 but with user `admin` and password `controllino@2023`. Once logged to SSH you need to change the password! You can do that by running command `passwd` and follow the instructions. 
 
-I appreciate any support of my work. If you feel thankful, you can buy me a virtual beer by transfering symbolic HNT amount to my helium wallet: 13j9f1yRNSpjWBmXG1bdUgABRvdiZuHDeZCdCD9cYS8rTFycZsx
-
-![image](https://user-images.githubusercontent.com/25409772/185716153-3a4b794d-ff72-408c-b993-6dca9df6f873.png)
+I appreciate any support of my work. If you feel thankful, you can buy me a virtual beer by transfering symbolic HNT amount to my helium wallet: 13zSBXPeCCXxTrq688J1543vsDBvPxeC2xgo3ss45MLFiDNTcgU
 
 
 
